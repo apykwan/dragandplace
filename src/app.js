@@ -1,5 +1,7 @@
 import { ProjectList } from './App/ProjectList.js';
 
+globalThis.DEFAULT_VALUE = 'APKWAN';
+
 class App {
     static init() {
         const activeProjectsList = new ProjectList('active');
@@ -16,14 +18,13 @@ class App {
         setTimeout(this.startAnalytics, 3000);
     }
 
-    static startAnalytics() {
-        const analyticsScript = document.createElement('script');
-        analyticsScript.src = 'assets/scripts/Utility/Analytics.js';
-        analyticsScript.defer = true;
+    // static startAnalytics() {
+    //     const analyticsScript = document.createElement('script');
+    //     analyticsScript.src = 'assets/scripts/Utility/Analytics.js';
+    //     analyticsScript.defer = true;
 
-        document.head.append(analyticsScript);
-
-    }
+    //     document.head.append(analyticsScript);
+    // }
 }
 
 App.init();
